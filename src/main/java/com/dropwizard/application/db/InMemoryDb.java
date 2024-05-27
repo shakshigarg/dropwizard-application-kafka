@@ -1,17 +1,27 @@
 package com.dropwizard.application.db;
-import java.util.HashMap;
-import java.util.Map;
+
+import com.dropwizard.application.models.Subscriber;
+
+import java.util.*;
 
 public class InMemoryDb {
-    Map<String, String> inMemoryDb;
+    List<Subscriber> subscriberList;
+    List<Subscriber> dependentSubscribers;
     private static final InMemoryDb INSTANCE = new InMemoryDb();
 
     private InMemoryDb() {
-        inMemoryDb = new HashMap<>();
+        subscriberList = new ArrayList<>();
     }
 
     public static InMemoryDb getInstance() {
         return INSTANCE;
+    }
+
+    public List<Subscriber> getSubscriberList() {
+        return subscriberList;
+    }
+    public List<Subscriber> getDependentSubscribers() {
+        return dependentSubscribers;
     }
 
 }

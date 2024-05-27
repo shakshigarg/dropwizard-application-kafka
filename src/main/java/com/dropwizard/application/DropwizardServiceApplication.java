@@ -3,12 +3,13 @@ import com.dropwizard.application.resources.ApiResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
 
+import javax.json.JsonObject;
+
 public class DropwizardServiceApplication extends Application<DropwizardServiceConfiguration> {
 
     public static void main(final String[] args) throws Exception {
         new DropwizardServiceApplication().run(args);
     }
-
 
     @Override
     public void run(DropwizardServiceConfiguration dropwizardServiceConfiguration, Environment environment) throws Exception {

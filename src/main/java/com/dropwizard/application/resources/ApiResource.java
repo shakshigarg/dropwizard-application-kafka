@@ -1,6 +1,5 @@
 package com.dropwizard.application.resources;
 import com.dropwizard.application.api.ServiceResponse;
-import com.dropwizard.application.service.Service;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
